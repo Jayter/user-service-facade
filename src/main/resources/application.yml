@@ -1,0 +1,20 @@
+
+
+tenant-connection-resolver:
+  tenant-header: tenant
+  db-name: user-service
+  url: localhost:8081/api/tenant/list
+
+server:
+  port: 8082
+
+spring:
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate.naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database: postgresql
+    hibernate:
+      ddl-auto: none
+  datasource:
+    initialize: false
